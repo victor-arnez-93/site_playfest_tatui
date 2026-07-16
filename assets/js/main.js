@@ -112,6 +112,61 @@
   });
   lightbox?.addEventListener('close', () => document.body.classList.remove('lightbox-open'));
 
+  const mediaVideos = [...document.querySelectorAll('.media-video')];
+
+  const updateVideoState = (card) => {
+    const video = card.querySelector('video');
+    const toggle = card.querySelector('.media-video__toggle');
+    if (!video || !toggle) return;
+    const isPlaying = !video.paused && !video.ended;
+    card.classList.toggle('is-playing', isPlaying);
+    toggle.setAttribute('aria-label', isPlaying ? 'Pausar vídeo' : 'Reproduzir vídeo');
+  };
+
+  const toggleVideo = async (card) => {
+    const video = card.querySelector('video');
+    if (!video) return;
+
+    video.muted = true;
+    video.volume = 0;
+
+    if (video.paused || video.ended) {
+      mediaVideos.forEach((otherCard) => {
+        if (otherCard === card) return;
+        const otherVideo = otherCard.querySelector('video');
+        if (otherVideo && !otherVideo.paused) otherVideo.pause();
+      });
+      try {
+        await video.play();
+      } catch (_) {
+        showToast('Toque novamente para reproduzir o vídeo.');
+      }
+    } else {
+      video.pause();
+    }
+    updateVideoState(card);
+  };
+
+  mediaVideos.forEach((card) => {
+    const video = card.querySelector('video');
+    const toggle = card.querySelector('.media-video__toggle');
+    if (!video || !toggle) return;
+
+    video.muted = true;
+    video.volume = 0;
+    video.controls = false;
+    video.removeAttribute('controls');
+
+    toggle.addEventListener('click', () => toggleVideo(card));
+    video.addEventListener('click', () => toggleVideo(card));
+    video.addEventListener('play', () => updateVideoState(card));
+    video.addEventListener('pause', () => updateVideoState(card));
+    video.addEventListener('ended', () => {
+      video.currentTime = 0;
+      updateVideoState(card);
+    });
+  });
+
   document.querySelectorAll('.accordion details').forEach((detail) => {
     detail.addEventListener('toggle', () => {
       if (!detail.open) return;

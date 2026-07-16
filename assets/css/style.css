@@ -85,7 +85,7 @@ h2 em { color: var(--red); font-style: normal; }
 
 .hero { position: relative; display: grid; min-height: 760px; height: min(930px, 100vh); color: #fff; background: var(--navy-900); overflow: hidden; }
 .hero__media, .hero__overlay { position: absolute; inset: 0; }
-.hero__media { background: url("../img/espaco-playfest.webp") center 48% / cover no-repeat; transform: scale(1.045); }
+.hero__media { background: url("../img/img1.jpg") center 48% / cover no-repeat; transform: scale(1.045); }
 .hero__overlay { background: linear-gradient(90deg, rgba(3,16,35,.98) 0%, rgba(3,16,35,.9) 40%, rgba(3,16,35,.48) 69%, rgba(3,16,35,.2) 100%), linear-gradient(0deg, rgba(3,16,35,.46), transparent 45%); }
 .hero__overlay::after { position: absolute; inset: 0; content: ""; opacity: .14; background-image: radial-gradient(circle at 20% 30%, #3c8fd2 0 1px, transparent 1.5px); background-size: 21px 21px; mask-image: linear-gradient(90deg, black, transparent 60%); }
 .hero__content { position: relative; z-index: 2; display: flex; align-items: center; padding-top: 112px; }
@@ -117,7 +117,7 @@ h2 em { color: var(--red); font-style: normal; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .attractions { background: #fff; }
-.attractions::before { position: absolute; inset: 0; content: ""; opacity: .52; background: url("../img/textura-clara.webp") center/cover; mix-blend-mode: multiply; }
+.attractions::before { position: absolute; inset: 0; content: ""; opacity: .52; background: url("../img/fundo1.png") center/cover; mix-blend-mode: multiply; }
 .attractions .container { position: relative; }
 .attractions__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .attraction-card { position: relative; min-height: 310px; padding: 28px; border: 1px solid rgba(5,35,72,.1); border-radius: var(--radius); background: rgba(255,255,255,.85); box-shadow: 0 15px 35px rgba(8,35,67,.06); overflow: hidden; transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease; }
@@ -128,17 +128,17 @@ h2 em { color: var(--red); font-style: normal; }
 .attraction-card__copy p { margin-bottom: 3px; color: var(--red); font-size: .63rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 .attraction-card__copy h3 { margin-bottom: 11px; color: var(--navy-900); font-size: 2rem; font-weight: 900; }
 .attraction-card__copy span { display: block; max-width: 290px; color: var(--muted); font-size: .87rem; line-height: 1.6; }
-.attraction-card--featured { color: #fff; background: var(--navy-900) url("../img/textura-azul.webp") center/cover; }
+.attraction-card--featured { color: #fff; background: var(--navy-900) url("../img/fundo3.png") center/cover; }
 .attraction-card--featured .attraction-card__number { color: rgba(255,255,255,.12); }
 .attraction-card--featured .attraction-card__icon { color: var(--navy-900); background: var(--gold); }
 .attraction-card--featured h3 { color: #fff; }
 .attraction-card--featured .attraction-card__copy span { color: #b9c7d8; }
-.attraction-card--cta { display: flex; flex-direction: column; justify-content: flex-end; color: #fff; background: var(--red) url("../img/textura-vermelha.webp") center/cover; }
+.attraction-card--cta { display: flex; flex-direction: column; justify-content: flex-end; color: #fff; background: var(--red) url("../img/fundo2.png") center/cover; }
 .attraction-card--cta p { max-width: 280px; margin-bottom: 28px; font-family: var(--heading); font-size: 2.2rem; font-weight: 800; line-height: 1; text-transform: uppercase; }
 .attraction-card--cta a { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.3); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
 
 .celebration { color: #fff; background: var(--navy-900); overflow: hidden; }
-.celebration__texture { position: absolute; inset: 0; opacity: .46; background: url("../img/textura-azul.webp") center/cover; }
+.celebration__texture { position: absolute; inset: 0; opacity: .46; background: url("../img/fundo3.png") center/cover; }
 .celebration::after { position: absolute; top: -25%; right: -10%; width: 600px; height: 600px; content: ""; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; box-shadow: 0 0 0 90px rgba(255,255,255,.018), 0 0 0 180px rgba(255,255,255,.014); }
 .celebration__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 86px; }
 .celebration__visual { position: relative; }
@@ -217,7 +217,7 @@ h2 em { color: var(--red); font-style: normal; }
 .steps__line { position: absolute; right: 17%; bottom: 185px; left: 17%; height: 1px; border-top: 1px dashed rgba(224,32,38,.42); }
 
 .quote { color: #fff; background: var(--navy-900); overflow: hidden; }
-.quote__texture { position: absolute; inset: 0; opacity: .6; background: url("../img/textura-azul.webp") center/cover; }
+.quote__texture { position: absolute; inset: 0; opacity: .6; background: url("../img/fundo3.png") center/cover; }
 .quote::before { position: absolute; top: -20%; left: -15%; width: 570px; height: 570px; content: ""; border-radius: 50%; background: radial-gradient(circle, rgba(23,76,131,.65), transparent 68%); }
 .quote__grid { position: relative; display: grid; grid-template-columns: .82fr 1.18fr; align-items: center; gap: 80px; }
 .quote h2 { color: #fff; }
@@ -269,7 +269,7 @@ h2 em { color: var(--red); font-style: normal; }
 .accordion details p { max-width: 680px; margin: -5px 0 23px; padding-right: 45px; color: #3f4e61; font-size: .84rem; font-weight: 700; }
 
 .final-cta { position: relative; padding: 65px 0; color: #fff; background: var(--red); overflow: hidden; }
-.final-cta__texture { position: absolute; inset: 0; opacity: .35; background: url("../img/textura-vermelha.webp") center/cover; }
+.final-cta__texture { position: absolute; inset: 0; opacity: .35; background: url("../img/fundo2.png") center/cover; }
 .final-cta__inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 50px; }
 .final-cta p { margin-bottom: 6px; color: var(--gold); font-size: .69rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .final-cta h2 { max-width: 760px; color: #fff; font-size: clamp(2.4rem, 4.3vw, 4.2rem); }
